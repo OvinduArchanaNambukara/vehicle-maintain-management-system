@@ -1,3 +1,43 @@
-.logo{
-  width: 4em;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Kalam:wght@300&display=swap');
+
+$navbar-bg-color:#054101;
+$navbar-title-color:#e0f735;
+
+.navbar{
+  background-color: $navbar-bg-color;
+
+  .logo{
+    width: 4em;
+  }
+  .logo-title{
+    color: $navbar-title-color;
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    //font-family: 'Baloo 2', cursive;
+    //font-family: 'Kalam', cursive;
+  }
+
+  .nav-link{
+    color: $navbar-title-color;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.2em;
+  }
+
+  .navbar-toggler {
+    width: 47px;
+    height: 34px;
+    background-color: $navbar-bg-color;
+    border: 1px solid $navbar-title-color;
+
+    .line {
+      width: 100%;
+      float: left;
+      height: 2px;
+      background-color: $navbar-title-color;
+      margin-bottom: 5px;
+    }
+  }
 }
+
+
