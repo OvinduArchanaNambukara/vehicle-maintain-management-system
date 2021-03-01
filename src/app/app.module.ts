@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -14,6 +15,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     AppComponent,
     NavBarComponent,
     CarouselComponent,
+    FooterComponent,
 
   ],
   imports: [
