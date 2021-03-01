@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { FooterComponent } from './footer/footer.component';
+import { FooterCaptionComponent } from './footer/footer-caption/footer-caption.component';
 
 
 
@@ -16,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
     NavBarComponent,
     CarouselComponent,
     FooterComponent,
+    FooterCaptionComponent,
 
   ],
   imports: [
