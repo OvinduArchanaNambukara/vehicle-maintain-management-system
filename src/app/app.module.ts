@@ -8,6 +8,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { FooterComponent } from './footer/footer.component';
 import { FooterCaptionComponent } from './footer/footer-caption/footer-caption.component';
 import { FooterIconsComponent } from './footer/footer-icons/footer-icons.component';
+import { RegisterFormComponent } from './register-form/register-form.component';
 
 
 
@@ -20,6 +21,7 @@ import { FooterIconsComponent } from './footer/footer-icons/footer-icons.compone
     FooterComponent,
     FooterCaptionComponent,
     FooterIconsComponent,
+    RegisterFormComponent,
 
   ],
   imports: [
