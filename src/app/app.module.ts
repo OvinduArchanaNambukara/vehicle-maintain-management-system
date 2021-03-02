@@ -7,6 +7,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { FooterComponent } from './footer/footer.component';
 import { FooterCaptionComponent } from './footer/footer-caption/footer-caption.component';
+import { FooterIconsComponent } from './footer/footer-icons/footer-icons.component';
 
 
 
@@ -18,6 +19,7 @@ import { FooterCaptionComponent } from './footer/footer-caption/footer-caption.c
     CarouselComponent,
     FooterComponent,
     FooterCaptionComponent,
+    FooterIconsComponent,
 
   ],
   imports: [
