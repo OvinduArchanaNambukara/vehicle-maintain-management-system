@@ -9,6 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FooterCaptionComponent } from './footer/footer-caption/footer-caption.component';
 import { FooterIconsComponent } from './footer/footer-icons/footer-icons.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
+import {FormsModule} from '@angular/forms';
+
 
 
 
@@ -22,11 +24,11 @@ import { RegisterFormComponent } from './register-form/register-form.component';
     FooterCaptionComponent,
     FooterIconsComponent,
     RegisterFormComponent,
-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

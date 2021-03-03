@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-register-form',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterFormComponent implements OnInit {
 
-  constructor() { }
+  public provinces: string[] = ['Central Province', 'Eastern Province', 'Sabaragamuwa Province', 'Uva Province', 'North Central Province',
+                                'North Western Province', 'Western Province', 'Southern Province', 'Northern Province'];
 
-  ngOnInit(): void {
+
+  constructor() {
   }
 
+  ngOnInit()
+    :
+    void {
+  }
 }
