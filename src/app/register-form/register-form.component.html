@@ -5,7 +5,8 @@
         <div class="col-md-6 mb-3">
           <label for="validationCustom01" class="col-form-label">First name</label>
           <input type="text" class="form-control" id="validationCustom01" #fist_name='ngModel'
-                 [class.is-invalid]="fist_name.invalid && fist_name.touched" value="" required name="first_name" ngModel>
+                 [class.is-invalid]="fist_name.invalid && fist_name.touched" value="" required name="first_name"
+                 ngModel>
           <div class="invalid-feedback">
             First name is required
           </div>
@@ -27,26 +28,30 @@
               City is required
             </div>
           </div>
+
           <div class="col-md-3 mb-3">
             <label for="validationCustom04" class="col-form-label">Province</label>
-            <select class="custom-select" id="validationCustom04" required #province='ngModel'
-                    [class.is-invalid]="province.touched && province.invalid" name="province" ngModel>
-              <option selected disabled value="">Choose...</option>
+            <select (blur)="validateProvince(province.value)" (change)="validateProvince(province.value)"
+                    class="custom-select" id="validationCustom04" required #province='ngModel'
+                    [class.is-invalid]="province.touched && provinceHasError" name="province" ngModel>
+              <option value="default">Choose...</option>
               <option *ngFor="let province of provinces">{{province}}</option>
             </select>
             <div class="invalid-feedback">
               Province is required
             </div>
           </div>
+
           <div class="col-md-3 mb-3">
             <label for="validationCustom05" class="col-form-label">Zip</label>
-            <input type="number" class="form-control" id="validationCustom05"  name="zip" ngModel>
+            <input type="number" class="form-control" id="validationCustom05" name="zip" ngModel>
           </div>
           <div class="form-row">
             <div class="col-sm-12  mb-3">
               <label for="exampleFormControlTextarea1" class="col-form-label">Address</label>
               <textarea class="form-control is-invalid" id="exampleFormControlTextarea1" rows="3"
-                        required [class.is-invalid]="address.touched && address.invalid" name="address" #address='ngModel'
+                        required [class.is-invalid]="address.touched && address.invalid" name="address"
+                        #address='ngModel'
                         ngModel></textarea>
               <div class="invalid-feedback">
                 Address is required
@@ -64,12 +69,13 @@
 
             <div class="col mb-3">
               <label for="exampleFormControlTextarea1" class="col-form-label">Telephone</label>
-              <input type="tel" class="form-control" #phone='ngModel'  name="tel" ngModel required pattern="^<d{10}$"
+              <input type="number" class="form-control" #phone='ngModel' name="tel" ngModel required
                      [class.is-invalid]=" phone.invalid && phone.touched ">
-              <div class="text-danger" *ngIf="phone.errors && (phone.invalid || phone.touched)">
-                <small *ngIf="phone.errors.pattern">Phone number must be 10 digits</small>
+              <div class="invalid-feedback">
+                Required
               </div>
             </div>
+
             <div class="col mb-3">
               <label for="exampleFormControlTextarea1" class="col-form-label">National ID</label>
               <input type="text" class="form-control is-invalid" required name="nationalID"
@@ -142,7 +148,7 @@
 
           <div class="col-md-3 mb-3">
             <label for="exampleFormControlTextarea1" class="col-form-label">Registration number</label>
-            <input type="text" class="form-control" placeholder="" name="reg_no" #regi_no='ngModel'  required
+            <input type="text" class="form-control" placeholder="" name="reg_no" #regi_no='ngModel' required
                    [class.is-invalid]="regi_no.touched && regi_no.invalid" ngModel>
             <div class="invalid-feedback">
               Required
@@ -180,7 +186,9 @@
 
       <div class="form-group">
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+
+          <input class="form-check-input" type="checkbox" id="invalidCheck" name="agree" #agree='ngModel' required
+                 [class.is-invalid]="agree.invalid && agree.touched" ngModel>
           <label class="form-check-label" for="invalidCheck">
             Agree to terms and conditions
           </label>
@@ -189,7 +197,9 @@
           </div>
         </div>
       </div>
-      <button class="btn btn-primary mb-2" type="submit">Submit form</button>
+      <button class="btn btn-primary mb-2 " [disabled]="userForm.form.invalid || provinceHasError" type="submit">Submit
+        form
+      </button>
     </form>
   </div>
 </div>
