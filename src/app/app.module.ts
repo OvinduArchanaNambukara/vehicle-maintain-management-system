@@ -10,6 +10,7 @@ import { FooterCaptionComponent } from './footer/footer-caption/footer-caption.c
 import { FooterIconsComponent } from './footer/footer-icons/footer-icons.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import {FormsModule} from '@angular/forms';
+import { BookingFromComponent } from './booking-from/booking-from.component';
 
 
 
@@ -24,6 +25,7 @@ import {FormsModule} from '@angular/forms';
     FooterCaptionComponent,
     FooterIconsComponent,
     RegisterFormComponent,
+    BookingFromComponent,
   ],
   imports: [
     BrowserModule,
