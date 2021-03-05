@@ -14,6 +14,7 @@ import { BookingFromComponent } from './booking-from/booking-from.component';
 import { UserInterfaceComponent } from './user-interface/user-interface.component';
 import {QRCodeModule} from 'angularx-qrcode';
 import { QrcodeComponent } from './qrcode/qrcode.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { QrcodeComponent } from './qrcode/qrcode.component';
     BookingFromComponent,
     UserInterfaceComponent,
     QrcodeComponent,
+    UserDetailsComponent,
   ],
   imports: [
     BrowserModule,
