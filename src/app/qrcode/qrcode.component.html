@@ -1,0 +1,8 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 offset-3  text-center">
+      <qrcode [qrdata]="myAngularxQrCode" [width]="400" [errorCorrectionLevel]="'M'"></qrcode>
+      <h4><a href="#">http://localhost:4200/{{myAngularxQrCode}}</a></h4>
+    </div>
+  </div>
+</div>

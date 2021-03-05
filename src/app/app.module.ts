@@ -11,9 +11,10 @@ import { FooterIconsComponent } from './footer/footer-icons/footer-icons.compone
 import { RegisterFormComponent } from './register-form/register-form.component';
 import {FormsModule} from '@angular/forms';
 import { BookingFromComponent } from './booking-from/booking-from.component';
-
-
-
+import { UserInterfaceComponent } from './user-interface/user-interface.component';
+import {QRCodeModule} from 'angularx-qrcode';
+import { QrcodeComponent } from './qrcode/qrcode.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 
 @NgModule({
@@ -26,11 +27,15 @@ import { BookingFromComponent } from './booking-from/booking-from.component';
     FooterIconsComponent,
     RegisterFormComponent,
     BookingFromComponent,
+    UserInterfaceComponent,
+    QrcodeComponent,
+    UserDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    QRCodeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
