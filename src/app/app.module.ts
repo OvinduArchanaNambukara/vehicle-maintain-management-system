@@ -12,9 +12,7 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 import {FormsModule} from '@angular/forms';
 import { BookingFromComponent } from './booking-from/booking-from.component';
 import { UserInterfaceComponent } from './user-interface/user-interface.component';
-
-
-
+import {QRCodeModule} from 'angularx-qrcode';
 
 
 @NgModule({
@@ -32,7 +30,8 @@ import { UserInterfaceComponent } from './user-interface/user-interface.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    QRCodeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
