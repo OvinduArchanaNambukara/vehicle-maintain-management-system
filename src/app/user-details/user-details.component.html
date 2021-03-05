@@ -10,8 +10,7 @@
                    [class.is-invalid]="fist_name.invalid && fist_name.touched" value="" required name="first_name"
                    ngModel>
             <div class="input-group-append">
-              <span class="input-group-text">$</span>
-              <span class="input-group-text">0.00</span>
+              <i class="bi bi-pencil input-group-text"></i>
             </div>
           </div>
           <div>
@@ -25,8 +24,7 @@
           <input type="text" class="form-control" id="validationCustom02" #last_name='ngModel'
                  [class.is-invalid]="last_name.touched && last_name.invalid" required name="last_name" ngModel>
             <div class="input-group-append">
-              <span class="input-group-text">$</span>
-              <span class="input-group-text">0.00</span>
+              <i class="bi bi-pencil input-group-text"></i>
             </div>
           </div>
           <div>
@@ -42,8 +40,7 @@
             <input type="text" class="form-control" id="validationCustom03" #city='ngModel'
                    [class.is-invalid]="city.touched && city.invalid" required name="city" ngModel>
               <div class="input-group-append">
-                <span class="input-group-text">$</span>
-                <span class="input-group-text">0.00</span>
+                <i class="bi bi-pencil input-group-text"></i>
               </div>
             </div>
             <div class>
@@ -61,8 +58,7 @@
               <option *ngFor="let province of provinces">{{province}}</option>
             </select>
               <div class="input-group-append">
-                <span class="input-group-text">$</span>
-                <span class="input-group-text">0.00</span>
+                <i class="bi bi-pencil input-group-text"></i>
               </div>
             </div>
             <div>
@@ -75,8 +71,7 @@
             <div class="col-12 input-group p-0">
             <input type="number" class="form-control" id="validationCustom05" name="zip" ngModel>
               <div class="input-group-append">
-                <span class="input-group-text">$</span>
-                <span class="input-group-text">0.00</span>
+                <i class="bi bi-pencil input-group-text"></i>
               </div>
             </div>
           </div>
@@ -91,8 +86,7 @@
                         #address='ngModel'
                         ngModel></textarea>
                 <div class="input-group-append">
-                  <span class="input-group-text">$</span>
-                  <span class="input-group-text">0.00</span>
+                  <i class="bi bi-pencil input-group-text"></i>
                 </div>
               </div>
               <div>
@@ -106,8 +100,7 @@
               <input type="email" class="form-control" placeholder="" name="email" required
                      [class.is-invalid]="email.touched && email.invalid" #email='ngModel' ngModel>
                 <div class="input-group-append">
-                  <span class="input-group-text">$</span>
-                  <span class="input-group-text">0.00</span>
+                  <i class="bi bi-pencil input-group-text"></i>
                 </div>
               </div>
               <div>
@@ -121,8 +114,7 @@
               <input type="number" class="form-control" #phone='ngModel' name="tel" ngModel required
                      [class.is-invalid]=" phone.invalid && phone.touched ">
                 <div class="input-group-append">
-                  <span class="input-group-text">$</span>
-                  <span class="input-group-text">0.00</span>
+                  <i class="bi bi-pencil input-group-text"></i>
                 </div>
               </div>
               <div>
@@ -136,8 +128,7 @@
               <input type="text" class="form-control is-invalid" required name="nationalID"
                      [class.is-invalid]="Id.touched && Id.invalid" #Id='ngModel' ngModel>
                 <div class="input-group-append">
-                  <span class="input-group-text">$</span>
-                  <span class="input-group-text">0.00</span>
+                  <i class="bi bi-pencil input-group-text"></i>
                 </div>
               </div>
               <div>
@@ -161,7 +152,7 @@
           </div>
         </div>
       </div>
-      <button class="btn btn-primary mb-2 " [disabled]="userForm.form.invalid || provinceHasError" type="submit">Submit
+      <button class="btn btn-primary mb-2 " [disabled]="userForm.form.invalid || provinceHasError" type="submit">Save
         form
       </button>
     </form>
