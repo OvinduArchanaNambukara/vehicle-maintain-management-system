@@ -20,6 +20,7 @@ import { NewVehiFormComponent } from './new-vehi-form/new-vehi-form.component';
 import { VehiListComponent } from './vehi-list/vehi-list.component';
 import { NgQrScannerModule} from 'angular2-qrscanner';
 import { QrCodeScannerComponent } from './qr-code-scanner/qr-code-scanner.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 
 
@@ -40,6 +41,7 @@ import { QrCodeScannerComponent } from './qr-code-scanner/qr-code-scanner.compon
     NewVehiFormComponent,
     VehiListComponent,
     QrCodeScannerComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
