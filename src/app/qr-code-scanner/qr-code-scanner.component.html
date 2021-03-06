@@ -1,21 +1,21 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-4 col-12">
-      <div class="col-8 offset-2 scanner border rounded" [class.d-none]="scanButtonClick">
-        <qr-scanner
-          [debug]="false"
-          [canvasWidth]="500"
-          [canvasHeight]="500"
-          [stopAfterScan]="true"
-          [updateTime]="500">
-        </qr-scanner>
-      </div>
-      <div class="col-8 offset-2 scan border rounded  " [class.d-none]="!scanButtonClick">
-      </div>
-      <div class="col-6 offset-3 text-center">
-        <button type="button" (click)="isScanButtonClick()" class="btn btn-info px-5">Scan</button>
-      </div>
-    </div>
-  </div>
+<div class="col scanner  border rounded" [class.d-none]="scanButtonClick">
+  <qr-scanner
+    [debug]="false"
+    [canvasWidth]="100"
+    [canvasHeight]="100"
+    [stopAfterScan]="true"
+    [updateTime]="500">
+  </qr-scanner>
 </div>
+<div class="col scan border rounded  " [class.d-none]="!scanButtonClick">
+</div>
+<div class="col  text-center">
+  <button type="button" (click)="isScanButtonClick()" class="btn btn-info px-5 my-3">Scan</button>
+  <h5 class="text-center text-md-left border-bottom border-dark pt-5 pb-2">Scan the QR code get your account
+    link</h5>
+  <p class="text-md-left">
+    <a href="http://localhost:4200/" [class.d-none]="accountLink==''">http://localhost:4200/{{accountLink}}</a>
+  </p>
+</div>
+
 

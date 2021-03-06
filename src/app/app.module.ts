@@ -21,6 +21,8 @@ import { VehiListComponent } from './vehi-list/vehi-list.component';
 import { NgQrScannerModule} from 'angular2-qrscanner';
 import { QrCodeScannerComponent } from './qr-code-scanner/qr-code-scanner.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { MiddleContentComponent } from './home-page/middle-content/middle-content.component';
+import { AccountRegisterComponent } from './account-register/account-register.component';
 
 
 
@@ -42,6 +44,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     VehiListComponent,
     QrCodeScannerComponent,
     HomePageComponent,
+    MiddleContentComponent,
+    AccountRegisterComponent,
   ],
   imports: [
     BrowserModule,
