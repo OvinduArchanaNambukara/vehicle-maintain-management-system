@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="row" >
+
+        <div class="col-3 col-md-4" *ngFor="let vehicle of vehicles">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4 card-background">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5>Reg No: {{vehicle.Reg_no}}</h5>
+                  <h5>Chassis No:<br>{{vehicle.Chassis_no}}</h5>
+                  <h5>Engine No:<br>{{vehicle.Engine_no}}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3 col-md-4">
+          <div class="card border-0" style="width: 10rem;">
+            <img src="assets/add.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">Add</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
