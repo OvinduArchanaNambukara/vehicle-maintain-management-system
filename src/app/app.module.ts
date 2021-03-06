@@ -17,6 +17,7 @@ import { QrcodeComponent } from './qrcode/qrcode.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { NewVehiFormComponent } from './new-vehi-form/new-vehi-form.component';
+import { VehiListComponent } from './vehi-list/vehi-list.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { NewVehiFormComponent } from './new-vehi-form/new-vehi-form.component';
     UserDetailsComponent,
     VehicleDetailsComponent,
     NewVehiFormComponent,
+    VehiListComponent,
   ],
   imports: [
     BrowserModule,
