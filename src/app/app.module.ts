@@ -18,6 +18,9 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { NewVehiFormComponent } from './new-vehi-form/new-vehi-form.component';
 import { VehiListComponent } from './vehi-list/vehi-list.component';
+import { NgQrScannerModule} from 'angular2-qrscanner';
+import { QrCodeScannerComponent } from './qr-code-scanner/qr-code-scanner.component';
+
 
 
 @NgModule({
@@ -36,12 +39,14 @@ import { VehiListComponent } from './vehi-list/vehi-list.component';
     VehicleDetailsComponent,
     NewVehiFormComponent,
     VehiListComponent,
+    QrCodeScannerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     QRCodeModule,
+    NgQrScannerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
