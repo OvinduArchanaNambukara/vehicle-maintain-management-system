@@ -13,12 +13,12 @@ export class QrCodeScannerComponent implements OnInit {
   // @ts-ignore
   @ViewChild(QrScannerComponent, {static: false}) qrScannerComponent: QrScannerComponent;
 
-  scanButtonClick = false;
+  scanButtonClick = true;
 
   public isScanButtonClick = () => {
-    if (!this.scanButtonClick) {
+    if (this.scanButtonClick) {
       this.scanButtonClick = !this.scanButtonClick;
-      this.hello();
+      this.camaraON();
     }
   }
 
@@ -28,7 +28,7 @@ export class QrCodeScannerComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  hello(): void {
+  camaraON(): void {
     this.qrScannerComponent.getMediaDevices().then(devices => {
       console.log(devices);
       const videoDevices: MediaDeviceInfo[] = [];
