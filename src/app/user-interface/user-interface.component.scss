@@ -1,5 +1,10 @@
-.user-interface{
+.user-interface {
   background-image: url("../../assets/images/user-interface/background.jpg");
+
+  .card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
 
   .card-footer {
     font-size: 1.1em;

@@ -1,10 +1,18 @@
-.card-background{
-  background-image: url("../../assets/ffff.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+.vehi_container {
+  .card-background {
+    background-image: url("../../assets/ffff.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 
-}
+  }
 
-.card-text{
-  font-size: 1vw;
+  .card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  .card-text {
+    font-size: 1vw;
+  }
+
 }
