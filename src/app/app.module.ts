@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule , routingComponets} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
@@ -23,6 +23,7 @@ import { QrCodeScannerComponent } from './qr-code-scanner/qr-code-scanner.compon
 import { HomePageComponent } from './home-page/home-page.component';
 import { MiddleContentComponent } from './home-page/middle-content/middle-content.component';
 import { AccountRegisterComponent } from './account-register/account-register.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -46,6 +47,7 @@ import { AccountRegisterComponent } from './account-register/account-register.co
     HomePageComponent,
     MiddleContentComponent,
     AccountRegisterComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
