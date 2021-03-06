@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-vehi-list',
@@ -7,7 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VehiListComponent implements OnInit {
 
-  constructor() { }
+  public vehicles = [
+    {
+      Reg_no: 'CAD-6025',
+      Chassis_no: 'NKE155JK482',
+      Engine_no: 'HKO45481226'
+    },
+    {
+      Reg_no: 'CLK-4853',
+      Chassis_no: 'KLE44521',
+      Engine_no: 'HKO45481226'
+    },
+  ];
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
