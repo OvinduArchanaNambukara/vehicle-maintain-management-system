@@ -13,13 +13,22 @@ export class QrCodeScannerComponent implements OnInit {
   // @ts-ignore
   @ViewChild(QrScannerComponent, {static: false}) qrScannerComponent: QrScannerComponent;
 
+  scanButtonClick = false;
+
+  public isScanButtonClick = () => {
+    if (!this.scanButtonClick) {
+      this.scanButtonClick = !this.scanButtonClick;
+      this.hello();
+    }
+  }
+
   constructor() {
   }
 
   ngOnInit(): void {
   }
 
-  ngAfterViewInit(): void {
+  hello(): void {
     this.qrScannerComponent.getMediaDevices().then(devices => {
       console.log(devices);
       const videoDevices: MediaDeviceInfo[] = [];
