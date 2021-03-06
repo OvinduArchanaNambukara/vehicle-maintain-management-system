@@ -1,0 +1,169 @@
+<div class="container-fluid reg-container py-5">
+  <div class="col-sm-8 offset-2">
+    <form class="needs-validation reg-form rounded px-4 pt-3" novalidate #userForm="ngForm">
+      <div class="form-group" ngModelGroup="vehicle_details">
+        <div class="form-row">
+
+          <div class="col-md-3 mb-3">
+            <label class="col-form-label">Vehicle make</label>
+            <div class="col-12 input-group p-0">
+              <input type="text" class="form-control" placeholder="" name="vehicelMake" required #make='ngModel'
+                     [class.is-invalid]="make.touched && make.invalid" ngModel>
+              <div class="input-group-append">
+                <i class="bi bi-pencil input-group-text"></i>
+              </div>
+            </div>
+            <div>
+              <small class="text-danger " [class.d-none]="make.untouched || make.valid">Required</small>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-3">
+            <label class="col-form-label">Vehicle model</label>
+            <div class="col-12 input-group p-0">
+              <input type="text" class="form-control" placeholder="" name="vehicleModel" #model='ngModel' required
+                     [class.is-invalid]="model.touched && model.invalid" ngModel>
+              <div class="input-group-append">
+                <i class="bi bi-pencil input-group-text"></i>
+              </div>
+            </div>
+            <div>
+              <small class="text-danger " [class.d-none]="model.untouched || model.valid">Required</small>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="col-form-label">Chassis number</label>
+            <div class="col-12 input-group p-0">
+              <input type="text" class="form-control" placeholder="" name="chass_no" #chassis='ngModel' required
+                     [class.is-invalid]="chassis.touched && chassis.invalid" ngModel>
+              <div class="input-group-append">
+                <i class="bi bi-pencil input-group-text"></i>
+              </div>
+            </div>
+            <div>
+              <small class="text-danger " [class.d-none]="chassis.untouched || chassis.valid">Required</small>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="col-form-label">Engine number</label>
+            <div class="col-12 input-group p-0">
+              <input type="text" class="form-control" placeholder="" name="engi_no" #engi_no='ngModel' required
+                     [class.is-invalid]="engi_no.touched && engi_no.invalid" ngModel>
+              <div class="input-group-append">
+                <i class="bi bi-pencil input-group-text"></i>
+              </div>
+            </div>
+            <div>
+              <small class="text-danger " [class.d-none]="engi_no.untouched || engi_no.valid">Required</small>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-3">
+            <label class="col-form-label">Body colour</label>
+            <div class="col-12 input-group p-0">
+              <input type="text" class="form-control" placeholder="" name="body_color" #color='ngModel' required
+                     [class.is-invalid]="color.touched && color.invalid" ngModel>
+              <div class="input-group-append">
+                <i class="bi bi-pencil input-group-text"></i>
+              </div>
+            </div>
+            <div>
+              <small class="text-danger " [class.d-none]="color.untouched || color.valid">Required</small>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-3">
+            <label class="col-form-label">Date of registration</label>
+            <div class="col-12 input-group p-0">
+              <input type="date" class="form-control" placeholder="" name="date_of_regi" #regi_date='ngModel' required
+                     [class.is-invalid]="regi_date.touched && regi_date.invalid" ngModel>
+              <div class="input-group-append">
+                <i class="bi bi-pencil input-group-text"></i>
+              </div>
+            </div>
+            <div>
+              <small class="text-danger " [class.d-none]="regi_date.untouched || regi_date.valid">Required</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+
+          <div class="col-md-3 mb-3">
+            <label class="col-form-label">Registration number</label>
+            <div class="col-12 input-group p-0">
+              <input type="text" class="form-control" placeholder="" name="reg_no" #regi_no='ngModel' required
+                     [class.is-invalid]="regi_no.touched && regi_no.invalid" ngModel>
+              <div class="input-group-append">
+                <i class="bi bi-pencil input-group-text"></i>
+              </div>
+            </div>
+            <div>
+              <small class="text-danger " [class.d-none]="regi_no.untouched || regi_no.valid">Required</small>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label class="col-form-label">Odometer reading at the delevery</label>
+            <div class="col-12 input-group p-0">
+              <input type="text" class="form-control" placeholder="" name="odo_read" #odo_read='ngModel' required
+                     [class.is-invalid]="odo_read.touched && odo_read.invalid" ngModel>
+              <div class="input-group-append">
+                <i class="bi bi-pencil input-group-text"></i>
+              </div>
+            </div>
+            <div>
+              <small class="text-danger " [class.d-none]="odo_read.untouched || odo_read.valid">Required</small>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-3">
+            <label class="col-form-label">Year of Manufacture</label>
+            <div class="col-12 input-group p-0">
+              <input type="number" class="form-control" placeholder="" name="year_manu" #yr_manu='ngModel' required
+                     [class.is-invalid]="yr_manu.touched && yr_manu.invalid" ngModel>
+              <div class="input-group-append">
+                <i class="bi bi-pencil input-group-text"></i>
+              </div>
+            </div>
+            <div>
+              <small class="text-danger " [class.d-none]="yr_manu.untouched || yr_manu.valid">Required</small>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label class="col-form-label">Fuel Type</label>
+            <div class="col-12 input-group p-0">
+              <input type="text" class="form-control" placeholder="" name="fuel_type" #fuel_type='ngModel' required
+                     [class.is-invalid]="fuel_type.touched && fuel_type.invalid" ngModel>
+              <div class="input-group-append">
+                <i class="bi bi-pencil input-group-text"></i>
+              </div>
+            </div>
+            <div>
+              <small class="text-danger " [class.d-none]="fuel_type.untouched || fuel_type.valid">Required</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="invalidCheck" name="agree" #agree='ngModel' required
+                 [class.is-invalid]="agree.invalid && agree.touched" ngModel>
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary mb-2 " [disabled]="userForm.form.invalid" type="submit">Submit
+        form
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
