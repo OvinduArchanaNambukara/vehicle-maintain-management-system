@@ -16,6 +16,7 @@ import {QRCodeModule} from 'angularx-qrcode';
 import { QrcodeComponent } from './qrcode/qrcode.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { NewVehiFormComponent } from './new-vehi-form/new-vehi-form.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
     QrcodeComponent,
     UserDetailsComponent,
     VehicleDetailsComponent,
+    NewVehiFormComponent,
   ],
   imports: [
     BrowserModule,
