@@ -14,13 +14,14 @@ export class QrCodeScannerComponent implements OnInit {
   @ViewChild(QrScannerComponent, {static: false}) qrScannerComponent: QrScannerComponent;
 
   scanButtonClick = true;
+  accountLink = '';
 
   public isScanButtonClick = () => {
     if (this.scanButtonClick) {
       this.scanButtonClick = !this.scanButtonClick;
       this.camaraON();
     }
-  }
+  };
 
   constructor() {
   }
@@ -55,6 +56,7 @@ export class QrCodeScannerComponent implements OnInit {
 
     this.qrScannerComponent.capturedQr.subscribe(result => {
       console.log(result);
+      this.accountLink = result;
     });
   }
 
