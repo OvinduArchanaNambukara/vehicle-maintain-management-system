@@ -4,6 +4,7 @@ import {Customer} from '../../types/customer';
 import * as uuid from 'uuid';
 import {VehicleService} from '../../services/vehicle.service';
 import {Vehicle} from '../../types/vehicle';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -38,9 +39,12 @@ export class RegisterFormComponent implements OnInit {
 
     this.regVehicle.newVehicle(this.vehicleModel).subscribe((data => console.log('Sucess!', data)),
       (error: any) => console.log('error', error));
+
+    this.router.navigate(['/interface', this.userModel.id]);
+
   }
 
-  constructor(private regService: RegCustomerService, private regVehicle: VehicleService) {
+  constructor(private regService: RegCustomerService, private regVehicle: VehicleService, private router: Router) {
   }
 
   ngOnInit(): void {
