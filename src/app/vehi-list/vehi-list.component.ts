@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-vehi-list',
@@ -6,6 +7,8 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./vehi-list.component.scss']
 })
 export class VehiListComponent implements OnInit {
+
+  private id: string | null = null;
 
   public vehicles = [
     {
@@ -20,10 +23,14 @@ export class VehiListComponent implements OnInit {
     },
   ];
 
-  constructor() {
+  constructor(private route: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.paramMap.get('id');
+  }
+  onClick():void {
+    this.router.navigate(['/new_vehi', this.id]);
   }
 
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-new-vehi-form',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewVehiFormComponent implements OnInit {
 
-  constructor() { }
+  private id: string | null = null;
+
+  constructor(private route: ActivatedRoute, private router: Router) {
+  }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.paramMap.get('id');
   }
+
 
 }

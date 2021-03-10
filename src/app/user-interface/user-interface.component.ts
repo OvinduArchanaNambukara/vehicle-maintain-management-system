@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-user-interface',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserInterfaceComponent implements OnInit {
 
-  constructor() { }
+  private id: string | null = null;
 
-  ngOnInit(): void {
+  constructor(private route: ActivatedRoute, private router: Router) {
   }
 
+  ngOnInit(): void {
+    this.id = this.route.snapshot.paramMap.get('id');
+  }
+
+  onClick(path: string):void {
+    this.router.navigate([path, this.id]);
+  }
 }

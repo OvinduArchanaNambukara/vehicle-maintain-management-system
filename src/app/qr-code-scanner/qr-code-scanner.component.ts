@@ -1,5 +1,6 @@
 import {Component, ViewChild, ViewEncapsulation, OnInit} from '@angular/core';
 import {QrScannerComponent} from 'angular2-qrscanner';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -23,10 +24,14 @@ export class QrCodeScannerComponent implements OnInit {
     }
   };
 
-  constructor() {
+  constructor(private router:Router) {
   }
 
   ngOnInit(): void {
+  }
+
+  onClickLink(){
+    this.router.navigate(['/interface',this.accountLink])
   }
 
   camaraON(): void {

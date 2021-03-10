@@ -14,7 +14,7 @@
   <h5 class="text-center text-md-left border-bottom border-dark pt-5 pb-2">Scan the QR code get your account
     link</h5>
   <p class="text-md-left">
-    <a routerLink="/interface" [class.d-none]="accountLink==''">http://localhost:4200/{{accountLink}}</a>
+    <a (click)="onClickLink()" [class.d-none]="accountLink==''">http://localhost:4200/{{accountLink}}</a>
   </p>
 </div>
 

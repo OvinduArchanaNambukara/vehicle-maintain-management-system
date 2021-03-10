@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-qrcode',
@@ -7,11 +8,20 @@ import {Component, OnInit} from '@angular/core';
 })
 export class QrcodeComponent implements OnInit {
 
-  public myAngularxQrCode = 'Vehicle-MM-System';
+  private id: string | null = null;
+  public myAngularxQrCode: string = '';
 
-  constructor() {
+  private onGenerateCode(): void {
+    this.myAngularxQrCode = this.id ? this.id : '';
+  }
+
+  constructor(private route: ActivatedRoute) {
+
   }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.paramMap.get('id');
+    this.onGenerateCode();
   }
+
 }
