@@ -95,7 +95,7 @@
           <div class="col-md-3 mb-3">
             <label for="exampleFormControlTextarea1" class="col-form-label">Vehicle make</label>
             <input type="text" class="form-control" placeholder="" name="vehicelMake" required #make='ngModel'
-                   [class.is-invalid]="make.touched && make.invalid" ngModel>
+                   [class.is-invalid]="make.touched && make.invalid" [(ngModel)]="vehicleModel.vehi_make">
             <div class="invalid-feedback">
               Vehecle make is required
             </div>
@@ -104,7 +104,7 @@
           <div class="col-md-3 mb-3">
             <label for="exampleFormControlTextarea1" class="col-form-label">Vehicle model</label>
             <input type="text" class="form-control" placeholder="" name="vehicleModel" #model='ngModel' required
-                   [class.is-invalid]="model.touched && model.invalid" ngModel>
+                   [class.is-invalid]="model.touched && model.invalid" [(ngModel)]="vehicleModel.vehi_model">
             <div class="invalid-feedback">
               Vehicle model
             </div>
@@ -113,7 +113,7 @@
           <div class="col-md-6 mb-3">
             <label for="exampleFormControlTextarea1" class="col-form-label">Chassis number</label>
             <input type="text" class="form-control" placeholder="" name="chass_no" #chassis='ngModel' required
-                   [class.is-invalid]="chassis.touched && chassis.invalid" ngModel>
+                   [class.is-invalid]="chassis.touched && chassis.invalid" [(ngModel)]="vehicleModel.chassis_no">
             <div class="invalid-feedback">
               Chassis number
             </div>
@@ -122,7 +122,7 @@
           <div class="col-md-6 mb-3">
             <label for="exampleFormControlTextarea1" class="col-form-label">Engine number</label>
             <input type="text" class="form-control" placeholder="" name="engi_no" #engi_no='ngModel' required
-                   [class.is-invalid]="engi_no.touched && engi_no.invalid" ngModel>
+                   [class.is-invalid]="engi_no.touched && engi_no.invalid" [(ngModel)]="vehicleModel.engi_no">
             <div class="invalid-feedback">
               Engine number is required
             </div>
@@ -140,7 +140,7 @@
           <div class="col-md-3 mb-3">
             <label for="exampleFormControlTextarea1" class="col-form-label">Date of registration</label>
             <input type="date" class="form-control" placeholder="" name="date_of_regi" #regi_date='ngModel' required
-                   [class.is-invalid]="regi_date.touched && regi_date.invalid" ngModel>
+                   [class.is-invalid]="regi_date.touched && regi_date.invalid" [(ngModel)]="vehicleModel.reg_date">
             <div class="invalid-feedback">
               Required
             </div>
@@ -149,7 +149,7 @@
           <div class="col-md-3 mb-3">
             <label for="exampleFormControlTextarea1" class="col-form-label">Registration number</label>
             <input type="text" class="form-control" placeholder="" name="reg_no" #regi_no='ngModel' required
-                   [class.is-invalid]="regi_no.touched && regi_no.invalid" ngModel>
+                   [class.is-invalid]="regi_no.touched && regi_no.invalid" [(ngModel)]="vehicleModel.reg_no">
             <div class="invalid-feedback">
               Required
             </div>
@@ -158,7 +158,7 @@
           <div class="col-md-3 mb-3">
             <label for="exampleFormControlTextarea1" class="col-form-label">Odometer reading at the delevery</label>
             <input type="text" class="form-control" placeholder="" name="odo_read" #odo_read='ngModel' required
-                   [class.is-invalid]="odo_read.touched && odo_read.invalid" ngModel>
+                   [class.is-invalid]="odo_read.touched && odo_read.invalid" [(ngModel)]="vehicleModel.odo_read">
             <div class="invalid-feedback">
               Required
             </div>
@@ -167,7 +167,7 @@
           <div class="col-md-3 mb-3">
             <label for="exampleFormControlTextarea1" class="col-form-label">Year of Manufacture</label>
             <input type="number" class="form-control" placeholder="" name="year_manu" #yr_manu='ngModel' required
-                   [class.is-invalid]="yr_manu.touched && yr_manu.invalid" ngModel>
+                   [class.is-invalid]="yr_manu.touched && yr_manu.invalid" [(ngModel)]="vehicleModel.yr_manu">
             <div class="invalid-feedback">
               Required
             </div>
@@ -176,7 +176,7 @@
           <div class="col-md-3 mb-3">
             <label for="exampleFormControlTextarea1" class="col-form-label">Fuel Type</label>
             <input type="text" class="form-control" placeholder="" name="fuel_type" #fuel_type='ngModel' required
-                   [class.is-invalid]="fuel_type.touched && fuel_type.invalid" ngModel>
+                   [class.is-invalid]="fuel_type.touched && fuel_type.invalid" [(ngModel)]="vehicleModel.fuel_type">
             <div class="invalid-feedback">
               Required
             </div>
