@@ -20,4 +20,8 @@ export class VehicleService {
   getVehicleList(id: string | null): Observable<Vehicle[]> {
     return this.httpClient.get<Vehicle[]>(this.baseURL + '/' + id);
   }
+
+  getVehicleDetails(id: string | null, regNo: string | null): Observable<Vehicle> {
+    return this.httpClient.get<Vehicle>(this.baseURL + '/' + id + '/' + regNo);
+  }
 }
