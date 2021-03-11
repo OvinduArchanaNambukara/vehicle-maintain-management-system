@@ -17,7 +17,7 @@ export class VehicleService {
     return this.httpClient.post<Vehicle>(this.baseURL + '/create', vehicle);
   }
 
-  geVehicleList(): Observable<Vehicle[]> {
-    return this.httpClient.get<Vehicle[]>(this.baseURL + '/all');
+  getVehicleList(id: string | null): Observable<Vehicle[]> {
+    return this.httpClient.get<Vehicle[]>(this.baseURL + '/' + id);
   }
 }

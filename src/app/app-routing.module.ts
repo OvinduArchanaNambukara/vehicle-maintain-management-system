@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'user_details/:id', component: UserDetailsComponent},
   {path: 'qr/:id', component: QrcodeComponent},
   {path: 'vehi_list/:id', component: VehiListComponent},
-  {path: 'vehi_details/:id', component: VehicleDetailsComponent},
+  {path: 'vehi_details/:id/:reg_no', component: VehicleDetailsComponent},
   {path: 'new_vehi/:id', component: NewVehiFormComponent},
   {path: 'reg', component: RegisterFormComponent},
   {path: '**', component: PageNotFoundComponent},

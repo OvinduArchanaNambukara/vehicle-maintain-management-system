@@ -32,7 +32,7 @@ export class RegisterFormComponent implements OnInit {
 
   onSubmit(): void {
     this.userModel.id = uuid.v4();
-    this.vehicleModel.user_id = this.userModel.id;
+    this.vehicleModel.userId = this.userModel.id;
 
     this.regService.newCustomer(this.userModel).subscribe((data => console.log('Sucess!', data)),
       (error: any) => console.log('error', error));

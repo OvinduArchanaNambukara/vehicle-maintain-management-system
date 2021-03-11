@@ -19,7 +19,7 @@ export class VehiListComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
-    this.vehicleService.geVehicleList().subscribe(data => console.log(this.vehicles = data));
+    this.vehicleService.getVehicleList(this.id).subscribe(data => console.log(this.vehicles = data));
   }
 
   onClick(): void {

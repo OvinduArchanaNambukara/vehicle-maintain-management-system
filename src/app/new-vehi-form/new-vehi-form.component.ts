@@ -18,7 +18,7 @@ export class NewVehiFormComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.vehicleModel.user_id = this.id ? this.id : '';
+    this.vehicleModel.userId = this.id ? this.id : '';
     this.regVehicle.newVehicle(this.vehicleModel).subscribe((data => console.log('Sucess!', data)),
       (error: any) => console.log('error', error));
   }
