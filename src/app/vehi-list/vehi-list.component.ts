@@ -22,7 +22,11 @@ export class VehiListComponent implements OnInit {
     this.vehicleService.getVehicleList(this.id).subscribe(data => console.log(this.vehicles = data));
   }
 
-  onClick(): void {
+  onCardClick(regNo: string): void {
+    this.router.navigate(['/vehi_details', this.id, regNo]);
+  }
+
+  onAddClick(): void {
     this.router.navigate(['/new_vehi', this.id]);
   }
 
