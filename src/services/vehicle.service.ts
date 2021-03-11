@@ -8,12 +8,16 @@ import {Vehicle} from '../types/vehicle';
 })
 export class VehicleService {
 
-  private baseURL = 'http://localhost:8080/api/vehicle/create';
+  private baseURL = 'http://localhost:8080/api/vehicle';
 
   constructor(private httpClient: HttpClient) {
   }
 
   newVehicle(vehicle: Vehicle): Observable<any> {
-    return this.httpClient.post(this.baseURL, vehicle);
+    return this.httpClient.post<Vehicle>(this.baseURL + '/create', vehicle);
+  }
+
+  geVehicleList(): Observable<Vehicle[]> {
+    return this.httpClient.get<Vehicle[]>(this.baseURL + '/all');
   }
 }

@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import {VehicleService} from '../../services/vehicle.service';
+import {Vehicle} from '../../types/vehicle';
 
 @Component({
   selector: 'app-vehi-list',
@@ -10,26 +12,17 @@ export class VehiListComponent implements OnInit {
 
   private id: string | null = null;
 
-  public vehicles = [
-    {
-      Reg_no: 'CAD-6025',
-      Chassis_no: 'NKE155JK482',
-      Engine_no: 'HKO45481226'
-    },
-    {
-      Reg_no: 'CLK-4853',
-      Chassis_no: 'KLE44521',
-      Engine_no: 'HKO45481226'
-    },
-  ];
+  public vehicles: Vehicle[] = [];
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+  constructor(private route: ActivatedRoute, private router: Router, private vehicleService: VehicleService) {
   }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
+    this.vehicleService.geVehicleList().subscribe(data => console.log(this.vehicles = data));
   }
-  onClick():void {
+
+  onClick(): void {
     this.router.navigate(['/new_vehi', this.id]);
   }
 
