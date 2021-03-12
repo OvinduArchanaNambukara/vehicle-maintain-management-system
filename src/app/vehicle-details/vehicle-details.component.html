@@ -83,10 +83,7 @@
             <div class="col-12 input-group p-0">
               <input type="date" class="form-control" placeholder="" name="date_of_regi" #regi_date='ngModel' required
                      [class.is-invalid]="regi_date.touched && regi_date.invalid" [(ngModel)]="vehicleModel.regDate"
-                     [disabled]="!isEditClick">
-              <div class="input-group-append">
-                <i class="bi bi-pencil input-group-text"></i>
-              </div>
+                     disabled>
             </div>
             <div>
               <small class="text-danger " [class.d-none]="regi_date.untouched || regi_date.valid">Required</small>
@@ -168,9 +165,12 @@
               (click)="onEditButtonClick()">
         Edit
       </button>
-      <button class="btn btn-primary mb-2 " [disabled]="userForm.form.invalid" type="submit"
+      <button class="btn btn-primary mb-2 px-4 " [disabled]="userForm.form.invalid" type="submit"
               [class.d-none]="!isEditClick">
         Save
+      </button>
+      <button class="btn btn-outline-danger mb-2 px-4 ml-4"  type="button">
+        Delete Vehicle
       </button>
     </form>
   </div>
