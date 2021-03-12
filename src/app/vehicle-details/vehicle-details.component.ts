@@ -11,6 +11,8 @@ import {VehicleService} from '../../services/vehicle.service';
 })
 export class VehicleDetailsComponent implements OnInit {
 
+
+  public isEditClick:boolean=false;
   private id: string | null = null;
   private regNo: string | null = null;
 
@@ -24,6 +26,10 @@ export class VehicleDetailsComponent implements OnInit {
     this.id = this.route.snapshot.paramMap.get('id');
     this.regNo = this.route.snapshot.paramMap.get('reg_no');
     this.vehicleService.getVehicleDetails(this.id, this.regNo).subscribe(data => console.log(this.vehicleModel = data));
+  }
+
+  onEditButtonClick(){
+   this.isEditClick=!this.isEditClick;
   }
 
 }

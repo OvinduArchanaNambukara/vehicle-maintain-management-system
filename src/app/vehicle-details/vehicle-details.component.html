@@ -3,12 +3,12 @@
     <form class="needs-validation reg-form rounded px-4 pt-3" novalidate #userForm="ngForm">
       <div class="form-group" ngModelGroup="vehicle_details">
         <div class="form-row">
-
           <div class="col-md-3 mb-3">
             <label class="col-form-label">Vehicle make</label>
             <div class="col-12 input-group p-0">
-              <input type="text" class="form-control" placeholder="" name="vehicelMake" required #make='ngModel'
-                     [class.is-invalid]="make.touched && make.invalid" [(ngModel)]="vehicleModel.vehiMake">
+              <input type="text" class="form-control " placeholder="" name="vehicelMake" required #make='ngModel'
+                     [class.is-invalid]="make.touched && make.invalid" [(ngModel)]="vehicleModel.vehiMake"
+                     [disabled]="!isEditClick">
               <div class="input-group-append">
                 <i class="bi bi-pencil input-group-text"></i>
               </div>
@@ -22,7 +22,8 @@
             <label class="col-form-label">Vehicle model</label>
             <div class="col-12 input-group p-0">
               <input type="text" class="form-control" placeholder="" name="vehicleModel" #model='ngModel' required
-                     [class.is-invalid]="model.touched && model.invalid" [(ngModel)]="vehicleModel.vehiModel">
+                     [class.is-invalid]="model.touched && model.invalid" [(ngModel)]="vehicleModel.vehiModel"
+                     [disabled]="!isEditClick">
               <div class="input-group-append">
                 <i class="bi bi-pencil input-group-text"></i>
               </div>
@@ -36,7 +37,8 @@
             <label class="col-form-label">Chassis number</label>
             <div class="col-12 input-group p-0">
               <input type="text" class="form-control" placeholder="" name="chass_no" #chassis='ngModel' required
-                     [class.is-invalid]="chassis.touched && chassis.invalid" [(ngModel)]="vehicleModel.chassisNo">
+                     [class.is-invalid]="chassis.touched && chassis.invalid" [(ngModel)]="vehicleModel.chassisNo"
+                     [disabled]="!isEditClick">
               <div class="input-group-append">
                 <i class="bi bi-pencil input-group-text"></i>
               </div>
@@ -50,7 +52,8 @@
             <label class="col-form-label">Engine number</label>
             <div class="col-12 input-group p-0">
               <input type="text" class="form-control" placeholder="" name="engi_no" #engi_no='ngModel' required
-                     [class.is-invalid]="engi_no.touched && engi_no.invalid" [(ngModel)]="vehicleModel.engiNo">
+                     [class.is-invalid]="engi_no.touched && engi_no.invalid" [(ngModel)]="vehicleModel.engiNo"
+                     [disabled]="!isEditClick">
               <div class="input-group-append">
                 <i class="bi bi-pencil input-group-text"></i>
               </div>
@@ -64,7 +67,8 @@
             <label class="col-form-label">Body colour</label>
             <div class="col-12 input-group p-0">
               <input type="text" class="form-control" placeholder="" name="body_color" #color='ngModel' required
-                     [class.is-invalid]="color.touched && color.invalid" [(ngModel)]="vehicleModel.color">
+                     [class.is-invalid]="color.touched && color.invalid" [(ngModel)]="vehicleModel.color"
+                     [disabled]="!isEditClick">
               <div class="input-group-append">
                 <i class="bi bi-pencil input-group-text"></i>
               </div>
@@ -78,7 +82,8 @@
             <label class="col-form-label">Date of registration</label>
             <div class="col-12 input-group p-0">
               <input type="date" class="form-control" placeholder="" name="date_of_regi" #regi_date='ngModel' required
-                     [class.is-invalid]="regi_date.touched && regi_date.invalid" [(ngModel)]="vehicleModel.regDate">
+                     [class.is-invalid]="regi_date.touched && regi_date.invalid" [(ngModel)]="vehicleModel.regDate"
+                     [disabled]="!isEditClick">
               <div class="input-group-append">
                 <i class="bi bi-pencil input-group-text"></i>
               </div>
@@ -95,7 +100,8 @@
             <label class="col-form-label">Registration number</label>
             <div class="col-12 input-group p-0">
               <input type="text" class="form-control" placeholder="" name="reg_no" #regi_no='ngModel' required
-                     [class.is-invalid]="regi_no.touched && regi_no.invalid" [(ngModel)]="vehicleModel.regNo">
+                     [class.is-invalid]="regi_no.touched && regi_no.invalid" [(ngModel)]="vehicleModel.regNo"
+                     [disabled]="!isEditClick">
               <div class="input-group-append">
                 <i class="bi bi-pencil input-group-text"></i>
               </div>
@@ -108,7 +114,8 @@
             <label class="col-form-label">Odometer reading at the delevery</label>
             <div class="col-12 input-group p-0">
               <input type="text" class="form-control" placeholder="" name="odo_read" #odo_read='ngModel' required
-                     [class.is-invalid]="odo_read.touched && odo_read.invalid" [(ngModel)]="vehicleModel.odoRead">
+                     [class.is-invalid]="odo_read.touched && odo_read.invalid" [(ngModel)]="vehicleModel.odoRead"
+                     [disabled]="!isEditClick">
               <div class="input-group-append">
                 <i class="bi bi-pencil input-group-text"></i>
               </div>
@@ -122,7 +129,8 @@
             <label class="col-form-label">Year of Manufacture</label>
             <div class="col-12 input-group p-0">
               <input type="number" class="form-control" placeholder="" name="year_manu" #yr_manu='ngModel' required
-                     [class.is-invalid]="yr_manu.touched && yr_manu.invalid" [(ngModel)]="vehicleModel.yrManu">
+                     [class.is-invalid]="yr_manu.touched && yr_manu.invalid" [(ngModel)]="vehicleModel.yrManu"
+                     [disabled]="!isEditClick">
               <div class="input-group-append">
                 <i class="bi bi-pencil input-group-text"></i>
               </div>
@@ -135,7 +143,8 @@
             <label class="col-form-label">Fuel Type</label>
             <div class="col-12 input-group p-0">
               <input type="text" class="form-control" placeholder="" name="fuel_type" #fuel_type='ngModel' required
-                     [class.is-invalid]="fuel_type.touched && fuel_type.invalid" [(ngModel)]="vehicleModel.fuelType">
+                     [class.is-invalid]="fuel_type.touched && fuel_type.invalid" [(ngModel)]="vehicleModel.fuelType"
+                     [disabled]="!isEditClick">
               <div class="input-group-append">
                 <i class="bi bi-pencil input-group-text"></i>
               </div>
@@ -149,7 +158,7 @@
       <div class="form-group">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="invalidCheck" name="agree" #agree='ngModel' required
-                 [class.is-invalid]="agree.invalid && agree.touched" ngModel>
+                 [class.is-invalid]="agree.invalid && agree.touched" ngModel [disabled]="!isEditClick">
           <label class="form-check-label" for="invalidCheck">
             Agree to terms and conditions
           </label>
@@ -158,8 +167,12 @@
           </div>
         </div>
       </div>
-      <button class="btn btn-primary mb-2 " [disabled]="userForm.form.invalid" type="submit">Submit
+
+      <button class="btn btn-success mb-2 " type="button" [class.d-none]="isEditClick" (click)="onEditButtonClick()">Edit
         form
+      </button>
+      <button class="btn btn-primary mb-2 " [disabled]="userForm.form.invalid" type="submit"
+              [class.d-none]="!isEditClick">Save
       </button>
     </form>
   </div>
