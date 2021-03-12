@@ -14,13 +14,14 @@ export class NewVehiFormComponent implements OnInit {
   vehicleModel = new Vehicle('', '', '', '', '', '', '', '', '',
     '', '');
 
-  constructor(private route: ActivatedRoute, private regVehicle: VehicleService) {
+  constructor(private route: ActivatedRoute, private regVehicle: VehicleService, private router: Router) {
   }
 
   onSubmit(): void {
     this.vehicleModel.userId = this.id ? this.id : '';
     this.regVehicle.newVehicle(this.vehicleModel).subscribe((data => console.log('Sucess!', data)),
       (error: any) => console.log('error', error));
+    this.router.navigate(['/vehi_list', this.id]);
   }
 
   ngOnInit(): void {

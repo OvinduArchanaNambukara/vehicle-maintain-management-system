@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Vehicle} from '../../types/vehicle';
-import {Customer} from '../../types/customer';
 import {VehicleService} from '../../services/vehicle.service';
+
 
 @Component({
   selector: 'app-vehicle-details',
@@ -19,7 +19,7 @@ export class VehicleDetailsComponent implements OnInit {
   public vehicleModel: Vehicle = new Vehicle('', '', '', '', '', '', '', '',
     '', '', '');
 
-  constructor(private route: ActivatedRoute, private vehicleService: VehicleService) {
+  constructor(private route: ActivatedRoute, private vehicleService: VehicleService,private router:Router) {
   }
 
   ngOnInit(): void {
@@ -34,10 +34,12 @@ export class VehicleDetailsComponent implements OnInit {
 
   onDelete(): void {
     this.vehicleService.deleteVehicle(this.id, this.regNo).subscribe(data => console.log(data));
+    setTimeout(()=>this.router.navigate(['/vehi_list', this.id]),1000);
+
   }
 
   onSave(): void {
     this.vehicleService.updateVehicle(this.vehicleModel, this.id, this.regNo).subscribe(data => console.log(this.vehicleModel = data));
+    this.router.navigate(['/vehi_list', this.id]);
   }
-
 }
