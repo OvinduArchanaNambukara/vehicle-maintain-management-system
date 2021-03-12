@@ -12,7 +12,7 @@ import {VehicleService} from '../../services/vehicle.service';
 export class VehicleDetailsComponent implements OnInit {
 
 
-  public isEditClick:boolean=false;
+  public isEditClick: boolean = false;
   private id: string | null = null;
   private regNo: string | null = null;
 
@@ -28,8 +28,12 @@ export class VehicleDetailsComponent implements OnInit {
     this.vehicleService.getVehicleDetails(this.id, this.regNo).subscribe(data => console.log(this.vehicleModel = data));
   }
 
-  onEditButtonClick(){
-   this.isEditClick=!this.isEditClick;
+  onEditButtonClick() {
+    this.isEditClick = !this.isEditClick;
+  }
+
+  onSave() {
+    this.vehicleService.updateVehicle(this.vehicleModel, this.id, this.regNo).subscribe(data => console.log(this.vehicleModel = data));
   }
 
 }

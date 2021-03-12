@@ -24,4 +24,8 @@ export class VehicleService {
   getVehicleDetails(id: string | null, regNo: string | null): Observable<Vehicle> {
     return this.httpClient.get<Vehicle>(this.baseURL + '/' + id + '/' + regNo);
   }
+
+  updateVehicle(vehicle: Vehicle, id: string | null, regNo: string | null): Observable<Vehicle> {
+    return this.httpClient.put<Vehicle>(this.baseURL + '/' + id + '/' + regNo + '/update', vehicle);
+  }
 }
