@@ -28,11 +28,15 @@ export class VehicleDetailsComponent implements OnInit {
     this.vehicleService.getVehicleDetails(this.id, this.regNo).subscribe(data => console.log(this.vehicleModel = data));
   }
 
-  onEditButtonClick() {
+  onEdit(): void {
     this.isEditClick = !this.isEditClick;
   }
 
-  onSave() {
+  onDelete(): void {
+    this.vehicleService.deleteVehicle(this.id, this.regNo).subscribe(data => console.log(data));
+  }
+
+  onSave(): void {
     this.vehicleService.updateVehicle(this.vehicleModel, this.id, this.regNo).subscribe(data => console.log(this.vehicleModel = data));
   }
 
