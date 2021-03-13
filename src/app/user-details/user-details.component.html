@@ -166,6 +166,9 @@
       <button class="btn btn-primary mb-2 " [disabled]="userForm.form.invalid || provinceHasError" type="submit"
               [class.d-none]="!isEditClick">Save
       </button>
+      <button class="btn btn-outline-danger mb-2 px-4 ml-4" type="button" (click)="onDelete()">
+        Delete Account
+      </button>
     </form>
   </div>
 </div>

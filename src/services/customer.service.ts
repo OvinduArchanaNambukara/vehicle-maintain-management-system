@@ -13,8 +13,8 @@ export class CustomerService {
   constructor(private httpClient: HttpClient) {
   }
 
-  newCustomer(customer: Customer): Observable<any> {
-    return this.httpClient.post(this.baseURL + '/create', customer);
+  newCustomer(customer: Customer): Observable<Customer> {
+    return this.httpClient.post<Customer>(this.baseURL + '/create', customer);
   }
 
   customerDetails(id: string | null): Observable<Customer> {
@@ -23,5 +23,9 @@ export class CustomerService {
 
   updateCustomer(id: string | null, updatedCustomer: Customer): Observable<Customer> {
     return this.httpClient.put<Customer>(this.baseURL + '/' + id + '/update', updatedCustomer);
+  }
+
+  deleteCustomer(id: string | null): Observable<Customer> {
+    return this.httpClient.delete<Customer>(this.baseURL + '/' + id + '/delete');
   }
 }

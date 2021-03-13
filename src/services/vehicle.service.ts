@@ -32,4 +32,8 @@ export class VehicleService {
   deleteVehicle(id: string | null, regNo: string | null): Observable<Vehicle> {
     return this.httpClient.delete<Vehicle>(this.baseURL + '/' + id + '/' + regNo + '/delete');
   }
+
+  deleteAllVehiclesById(id: string | null): Observable<Vehicle[]> {
+    return this.httpClient.delete<Vehicle[]>(this.baseURL + '/' + id + '/deleteAll');
+  }
 }

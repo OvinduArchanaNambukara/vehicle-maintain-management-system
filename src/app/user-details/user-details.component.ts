@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Customer} from '../../types/customer';
 import {CustomerService} from '../../services/customer.service';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
+import {VehicleService} from '../../services/vehicle.service';
 
 @Component({
   selector: 'app-user-details',
@@ -28,7 +29,7 @@ export class UserDetailsComponent implements OnInit {
     }
   }
 
-  constructor(private customerService: CustomerService, private route: ActivatedRoute) {
+  constructor(private customerService: CustomerService, private route: ActivatedRoute, private router: Router, private vehicleService: VehicleService) {
   }
 
   ngOnInit(): void {
@@ -42,5 +43,12 @@ export class UserDetailsComponent implements OnInit {
 
   onSave(): void {
     this.customerService.updateCustomer(this.id, this.userModel).subscribe(data => console.log(data));
+  }
+
+  onDelete(): void {
+    this.customerService.deleteCustomer(this.id).subscribe(data => console.log(data));
+    this.vehicleService.deleteAllVehiclesById(this.id).subscribe(data => console.log(data));
+    this.router.navigate(['home']);
+
   }
 }
