@@ -40,4 +40,7 @@ export class UserDetailsComponent implements OnInit {
     this.isEditClick = !this.isEditClick;
   }
 
+  onSave(): void {
+    this.customerService.updateCustomer(this.id, this.userModel).subscribe(data => console.log(data));
+  }
 }

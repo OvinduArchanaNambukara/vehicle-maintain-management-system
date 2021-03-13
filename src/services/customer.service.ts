@@ -20,4 +20,8 @@ export class CustomerService {
   customerDetails(id: string | null): Observable<Customer> {
     return this.httpClient.get<Customer>(this.baseURL + '/' + id);
   }
+
+  updateCustomer(id: string | null, updatedCustomer: Customer): Observable<Customer> {
+    return this.httpClient.put<Customer>(this.baseURL + '/' + id + '/update', updatedCustomer);
+  }
 }
