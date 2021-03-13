@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {RegCustomerService} from '../../services/reg-customer.service';
+import {CustomerService} from '../../services/customer.service';
 import {Customer} from '../../types/customer';
 import * as uuid from 'uuid';
 import {VehicleService} from '../../services/vehicle.service';
@@ -44,7 +44,7 @@ export class RegisterFormComponent implements OnInit {
 
   }
 
-  constructor(private regService: RegCustomerService, private regVehicle: VehicleService, private router: Router) {
+  constructor(private regService: CustomerService, private regVehicle: VehicleService, private router: Router) {
   }
 
   ngOnInit(): void {

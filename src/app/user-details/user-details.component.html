@@ -7,8 +7,8 @@
           <label for="validationCustom01" class="col-form-label ">First name</label>
           <div class="col-12 input-group p-0">
             <input type="text" class="form-control" id="validationCustom01" #fist_name='ngModel'
-                   [class.is-invalid]="fist_name.invalid && fist_name.touched" value="" required name="first_name"
-                   ngModel>
+                   [class.is-invalid]="fist_name.invalid && fist_name.touched" required name="first_name"
+                   [(ngModel)]="userModel.firstName">
             <div class="input-group-append">
               <i class="bi bi-pencil input-group-text"></i>
             </div>
@@ -23,7 +23,8 @@
           <label for="validationCustom02" class="col-form-label">Last name</label>
           <div class="col-12 input-group p-0">
             <input type="text" class="form-control" id="validationCustom02" #last_name='ngModel'
-                   [class.is-invalid]="last_name.touched && last_name.invalid" required name="last_name" ngModel>
+                   [class.is-invalid]="last_name.touched && last_name.invalid" required name="last_name"
+                   [(ngModel)]="userModel.lastName">
             <div class="input-group-append">
               <i class="bi bi-pencil input-group-text"></i>
             </div>
@@ -40,7 +41,8 @@
             <label for="validationCustom03" class="col-form-label">City</label>
             <div class="col-12 input-group p-0">
               <input type="text" class="form-control" id="validationCustom03" #city='ngModel'
-                     [class.is-invalid]="city.touched && city.invalid" required name="city" ngModel>
+                     [class.is-invalid]="city.touched && city.invalid" required name="city"
+                     [(ngModel)]="userModel.city">
               <div class="input-group-append">
                 <i class="bi bi-pencil input-group-text"></i>
               </div>
@@ -55,7 +57,8 @@
             <div class="col-12 input-group p-0">
               <select (blur)="validateProvince(province.value)" (change)="validateProvince(province.value)"
                       class="custom-select" id="validationCustom04" required #province='ngModel'
-                      [class.is-invalid]="province.touched && provinceHasError" name="province" ngModel>
+                      [class.is-invalid]="province.touched && provinceHasError" name="province"
+                      [(ngModel)]="userModel.province">
                 <option value="default">Choose...</option>
                 <option *ngFor="let province of provinces">{{province}}</option>
               </select>
@@ -71,7 +74,7 @@
           <div class="col-md-3 mb-3">
             <label for="validationCustom05" class="col-form-label">Zip</label>
             <div class="col-12 input-group p-0">
-              <input type="number" class="form-control" id="validationCustom05" name="zip" ngModel>
+              <input type="number" class="form-control" id="validationCustom05" name="zip" [(ngModel)]="userModel.zip">
               <div class="input-group-append">
                 <i class="bi bi-pencil input-group-text"></i>
               </div>
@@ -85,8 +88,7 @@
               <div class="col-12 input-group p-0">
               <textarea class="form-control is-invalid" id="exampleFormControlTextarea1" rows="3"
                         required [class.is-invalid]="address.touched && address.invalid" name="address"
-                        #address='ngModel'
-                        ngModel></textarea>
+                        #address='ngModel' [(ngModel)]="userModel.address"></textarea>
                 <div class="input-group-append">
                   <i class="bi bi-pencil input-group-text"></i>
                 </div>
@@ -100,7 +102,8 @@
               <label for="exampleFormControlTextarea1" class="col-form-label">Email</label>
               <div class="col-12 input-group p-0">
                 <input type="email" class="form-control" placeholder="" name="email" required
-                       [class.is-invalid]="email.touched && email.invalid" #email='ngModel' ngModel>
+                       [class.is-invalid]="email.touched && email.invalid" #email='ngModel'
+                       [(ngModel)]="userModel.email">
                 <div class="input-group-append">
                   <i class="bi bi-pencil input-group-text"></i>
                 </div>
@@ -113,8 +116,8 @@
             <div class="col mb-3">
               <label for="exampleFormControlTextarea1" class="col-form-label">Telephone</label>
               <div class="col-12 input-group p-0">
-                <input type="number" class="form-control" #phone='ngModel' name="tel" ngModel required
-                       [class.is-invalid]=" phone.invalid && phone.touched ">
+                <input type="number" class="form-control" #phone='ngModel' name="tel" [(ngModel)]="userModel.telephone"
+                       required [class.is-invalid]=" phone.invalid && phone.touched ">
                 <div class="input-group-append">
                   <i class="bi bi-pencil input-group-text"></i>
                 </div>
@@ -128,7 +131,7 @@
               <label for="exampleFormControlTextarea1" class="col-form-label">National ID</label>
               <div class="col-12 input-group p-0">
                 <input type="text" class="form-control is-invalid" required name="nationalID"
-                       [class.is-invalid]="Id.touched && Id.invalid" #Id='ngModel' ngModel>
+                       [class.is-invalid]="Id.touched && Id.invalid" #Id='ngModel' [(ngModel)]="userModel.nationalId">
                 <div class="input-group-append">
                   <i class="bi bi-pencil input-group-text"></i>
                 </div>

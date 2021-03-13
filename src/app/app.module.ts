@@ -23,7 +23,7 @@ import {HomePageComponent} from './home-page/home-page.component';
 import {MiddleContentComponent} from './home-page/middle-content/middle-content.component';
 import {AccountRegisterComponent} from './account-register/account-register.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
-import {RegCustomerService} from '../services/reg-customer.service';
+import {CustomerService} from '../services/customer.service';
 import {HttpClientModule} from '@angular/common/http';
 
 
@@ -58,7 +58,7 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule,
   ],
   providers: [
-    RegCustomerService
+    CustomerService
   ],
   bootstrap: [AppComponent]
 })
