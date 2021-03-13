@@ -31,28 +31,32 @@
           <label class="col-form-label">Card Number</label>
           <div class="form-row mb-3">
             <div class="col">
-              <input type="number" class="form-control" name="cardN0_feild1" required #cardN0_feild1='ngModel' ngModel
+              <input type="text" class="form-control" name="cardN0_feild1" required #cardN0_feild1='ngModel' ngModel
                      [class.is-invalid]="(cardN0_feild1.touched && cardN0_feild1.invalid) ||
                      (cardN0_feild2.touched && cardN0_feild2.invalid) || (cardN0_feild4.touched && cardN0_feild4.invalid)
-                     || (cardN0_feild3.touched && cardN0_feild3.invalid)" >
+                     || (cardN0_feild3.touched && cardN0_feild3.invalid)" (keypress)="OnlyNumberAccept($event)"
+                     maxlength="4">
             </div>
             <div class="col">
-              <input type="number" class="form-control" name="cardN0_feild2" required #cardN0_feild2='ngModel' ngModel
+              <input type="text" class="form-control" name="cardN0_feild2" required #cardN0_feild2='ngModel' ngModel
                      [class.is-invalid]="(cardN0_feild1.touched && cardN0_feild1.invalid) ||
                      (cardN0_feild2.touched && cardN0_feild2.invalid) || (cardN0_feild4.touched && cardN0_feild4.invalid)
-                     || (cardN0_feild3.touched && cardN0_feild3.invalid)">
+                     || (cardN0_feild3.touched && cardN0_feild3.invalid)" (keypress)="OnlyNumberAccept($event)"
+                     maxlength="4">
             </div>
             <div class="col">
-              <input type="number" class="form-control" name="cardN0_feild3" required #cardN0_feild3='ngModel' ngModel
+              <input type="text" class="form-control" name="cardN0_feild3" required #cardN0_feild3='ngModel' ngModel
                      [class.is-invalid]="(cardN0_feild1.touched && cardN0_feild1.invalid) ||
                      (cardN0_feild2.touched && cardN0_feild2.invalid) || (cardN0_feild4.touched && cardN0_feild4.invalid)
-                     || (cardN0_feild3.touched && cardN0_feild3.invalid)">
+                     || (cardN0_feild3.touched && cardN0_feild3.invalid)" (keypress)="OnlyNumberAccept($event)"
+                     maxlength="4">
             </div>
             <div class="col">
-              <input type="number" class="form-control" name="cardN0_feild4" required #cardN0_feild4='ngModel' ngModel
+              <input type="text" class="form-control" name="cardN0_feild4" required #cardN0_feild4='ngModel' ngModel
                      [class.is-invalid]="(cardN0_feild1.touched && cardN0_feild1.invalid) ||
                      (cardN0_feild2.touched && cardN0_feild2.invalid) || (cardN0_feild4.touched && cardN0_feild4.invalid)
-                     || (cardN0_feild3.touched && cardN0_feild3.invalid)">
+                     || (cardN0_feild3.touched && cardN0_feild3.invalid)" (keypress)="OnlyNumberAccept($event)"
+                     maxlength="4">
             </div>
             <div class="col-12">
               <small class="text-danger " [class.d-none]="(cardN0_feild1.untouched || cardN0_feild1.valid) &&
@@ -73,8 +77,9 @@
 
             <div class="col-3">
               <label class="col-form-label">CV Code</label>
-              <input type="number" class="form-control " name="cardCV" required #cardCV='ngModel'
-                     [class.is-invalid]="cardCV.touched && cardCV.invalid" ngModel>
+              <input type="text" class="form-control " name="cardCV" required #cardCV='ngModel'
+                     [class.is-invalid]="cardCV.touched && cardCV.invalid" ngModel (keypress)="OnlyNumberAccept($event)"
+                     maxlength="3">
               <div class="col-12 p-0">
                 <small class="text-danger" [class.d-none]="cardCV.untouched || cardCV.valid">Required</small>
               </div>

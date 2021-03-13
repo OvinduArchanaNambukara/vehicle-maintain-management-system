@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-booking-from',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookingFromComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  OnlyNumberAccept(event: any): boolean {
+    const charcode = (event.which) ? event.which : event.keyCode;
+    if (charcode > 32 && (charcode < 48 || charcode > 57)) {
+      return false;
+    }
+    return true;
+  }
 }
