@@ -10,6 +10,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class UserDetailsComponent implements OnInit {
 
+  public isEditClick: boolean = false;
   private id: string | null = null;
   public provinceHasError = true;
 
@@ -27,13 +28,16 @@ export class UserDetailsComponent implements OnInit {
     }
   }
 
-
   constructor(private customerService: CustomerService, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
     this.customerService.customerDetails(this.id).subscribe(data => console.log(this.userModel = data));
+  }
+
+  onEdit(): void {
+    this.isEditClick = !this.isEditClick;
   }
 
 }
