@@ -17,13 +17,12 @@
           <h4>0713145998</h4>
         </div>
       </div>
-
       <div class="form-row mt-3">
-
         <div class="col-8 col-lg-6 card_details p-3 rounded">
           <label for="card_name" class="col-form-label">Name on Card</label>
           <input type="name" id="card_name" class="form-control" name="cardName"
-                 [class.is-invalid]="cardName.touched && cardName.invalid" required #cardName='ngModel' ngModel>
+                 [class.is-invalid]="cardName.touched && cardName.invalid" required #cardName='ngModel'
+                 [(ngModel)]="bookingModel.CardName">
           <div>
             <small class="text-danger " [class.d-none]="cardName.untouched || cardName.valid">Required</small>
           </div>
@@ -31,32 +30,32 @@
           <label class="col-form-label">Card Number</label>
           <div class="form-row mb-3">
             <div class="col">
-              <input type="text" class="form-control" name="cardN0_feild1" required #cardN0_feild1='ngModel' ngModel
+              <input type="text" class="form-control" name="cardN0_feild1" required #cardN0_feild1='ngModel'
                      [class.is-invalid]="(cardN0_feild1.touched && cardN0_feild1.invalid) ||
                      (cardN0_feild2.touched && cardN0_feild2.invalid) || (cardN0_feild4.touched && cardN0_feild4.invalid)
                      || (cardN0_feild3.touched && cardN0_feild3.invalid)" (keypress)="OnlyNumberAccept($event)"
-                     maxlength="4">
+                     maxlength="4" [(ngModel)]="bookingModel.CardN0Field1" (ngModelChange)="onChange()">
             </div>
             <div class="col">
-              <input type="text" class="form-control" name="cardN0_feild2" required #cardN0_feild2='ngModel' ngModel
+              <input type="text" class="form-control" name="cardN0_feild2" required #cardN0_feild2='ngModel'
                      [class.is-invalid]="(cardN0_feild1.touched && cardN0_feild1.invalid) ||
                      (cardN0_feild2.touched && cardN0_feild2.invalid) || (cardN0_feild4.touched && cardN0_feild4.invalid)
                      || (cardN0_feild3.touched && cardN0_feild3.invalid)" (keypress)="OnlyNumberAccept($event)"
-                     maxlength="4">
+                     maxlength="4" [(ngModel)]="bookingModel.CardN0Field2">
             </div>
             <div class="col">
-              <input type="text" class="form-control" name="cardN0_feild3" required #cardN0_feild3='ngModel' ngModel
+              <input type="text" class="form-control" name="cardN0_feild3" required #cardN0_feild3='ngModel'
                      [class.is-invalid]="(cardN0_feild1.touched && cardN0_feild1.invalid) ||
                      (cardN0_feild2.touched && cardN0_feild2.invalid) || (cardN0_feild4.touched && cardN0_feild4.invalid)
                      || (cardN0_feild3.touched && cardN0_feild3.invalid)" (keypress)="OnlyNumberAccept($event)"
-                     maxlength="4">
+                     maxlength="4" [(ngModel)]="bookingModel.CardN0Field3">
             </div>
             <div class="col">
-              <input type="text" class="form-control" name="cardN0_feild4" required #cardN0_feild4='ngModel' ngModel
+              <input type="text" class="form-control" name="cardN0_feild4" required #cardN0_feild4='ngModel'
                      [class.is-invalid]="(cardN0_feild1.touched && cardN0_feild1.invalid) ||
                      (cardN0_feild2.touched && cardN0_feild2.invalid) || (cardN0_feild4.touched && cardN0_feild4.invalid)
                      || (cardN0_feild3.touched && cardN0_feild3.invalid)" (keypress)="OnlyNumberAccept($event)"
-                     maxlength="4">
+                     maxlength="4" [(ngModel)]="bookingModel.CardNoField4">
             </div>
             <div class="col-12">
               <small class="text-danger " [class.d-none]="(cardN0_feild1.untouched || cardN0_feild1.valid) &&
@@ -69,7 +68,7 @@
             <div class="col-5">
               <label class="col-form-label">Expiry date</label>
               <input type="month" class="form-control" name="cardExp" required #cardExp='ngModel'
-                     [class.is-invalid]="cardExp.touched && cardExp.invalid" ngModel>
+                     [class.is-invalid]="cardExp.touched && cardExp.invalid" [(ngModel)]="bookingModel.CardExp">
               <div class="col-12 p-0" [class.d-none]="cardExp.untouched || cardExp.valid">
                 <small class="text-danger">Required</small>
               </div>
@@ -78,16 +77,22 @@
             <div class="col-3">
               <label class="col-form-label">CV Code</label>
               <input type="text" class="form-control " name="cardCV" required #cardCV='ngModel'
-                     [class.is-invalid]="cardCV.touched && cardCV.invalid" ngModel (keypress)="OnlyNumberAccept($event)"
-                     maxlength="3">
+                     [class.is-invalid]="cardCV.touched && cardCV.invalid" (keypress)="OnlyNumberAccept($event)"
+                     maxlength="3" [(ngModel)]="bookingModel.CardCvv">
               <div class="col-12 p-0">
                 <small class="text-danger" [class.d-none]="cardCV.untouched || cardCV.valid">Required</small>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-4" *ngIf="firstDigit!=5 && firstDigit !=4">
+          <img src="../../assets/images/booking-form-images/animation.gif" class="img-fluid ml-5" width="">
+        </div>
+        <div class="col-4" *ngIf="firstDigit==5">
           <img src="../../assets/images/booking-form-images/master.png" class="img-fluid ml-5">
+        </div>
+        <div class="col-4" *ngIf="firstDigit==4">
+          <img src="../../assets/images/booking-form-images/visa.png" class="img-fluid ml-5">
         </div>
       </div>
       <div class="col-12 p-0 my-3">
