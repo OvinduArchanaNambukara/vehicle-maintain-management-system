@@ -10,9 +10,11 @@ import {VehiListComponent} from './vehi-list/vehi-list.component';
 import {VehicleDetailsComponent} from './vehicle-details/vehicle-details.component';
 import {NewVehiFormComponent} from './new-vehi-form/new-vehi-form.component';
 import {RegisterFormComponent} from './register-form/register-form.component';
+import {BookingFromComponent} from './booking-from/booking-from.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path:'booking',component:BookingFromComponent},
   {path: 'home', component: HomePageComponent},
   {path: 'acc', component: AccountRegisterComponent},
   {path: 'interface/:id', component: UserInterfaceComponent},
