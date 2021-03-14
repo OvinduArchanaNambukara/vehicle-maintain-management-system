@@ -15,8 +15,8 @@
           <img src="../../assets/images/user-interface/qr.gif" class="card-img-top" alt="...">
           <div class="card-footer text-center ">Your QR code</div>
         </div>
-        <div class="card">
-          <img src="../../assets/images/user-interface/bookings.gif" class="card-img-top" alt="..." routerLink="/booking">
+        <div class="card" (click)="onClick('/bookings')">
+          <img src="../../assets/images/user-interface/bookings.gif" class="card-img-top" alt="...">
           <div class="card-footer text-center ">Bookings</div>
         </div>
         <div class="card" (click)="onClick('/vehi_list')">

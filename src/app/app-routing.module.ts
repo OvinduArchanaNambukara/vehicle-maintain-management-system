@@ -14,7 +14,7 @@ import {BookingFromComponent} from './booking-from/booking-from.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path:'booking',component:BookingFromComponent},
+  {path: 'bookings/:id', component: BookingFromComponent},
   {path: 'home', component: HomePageComponent},
   {path: 'acc', component: AccountRegisterComponent},
   {path: 'interface/:id', component: UserInterfaceComponent},

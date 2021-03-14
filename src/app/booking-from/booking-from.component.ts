@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {CreditCard} from '../../types/creditCard';
+import {ActivatedRoute} from '@angular/router';
+import {CustomerService} from '../../services/customer.service';
+import {Customer} from '../../types/customer';
 
 @Component({
   selector: 'app-booking-from',
@@ -10,11 +13,14 @@ export class BookingFromComponent implements OnInit {
 
   public bookingModel: CreditCard = new CreditCard('', '', '', '', '', '', '');
   public firstDigit: number | null = null;
+  public customer: Customer = new Customer('', '', '', '', '', '', '', '', '', '');
 
-  constructor() {
+  constructor(private route: ActivatedRoute, private customerService: CustomerService) {
   }
 
   ngOnInit(): void {
+    const id: string | null = this.route.snapshot.paramMap.get('id');
+    this.customerService.customerDetails(id).subscribe(data => this.customer = data);
   }
 
   onChange(): void {
